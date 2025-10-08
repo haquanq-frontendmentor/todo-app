@@ -1,5 +1,8 @@
 {
   "name": "todo-app",
+  "description": "Solution for frontendmentor.io challenge: todo-app",
+  "author": "haquanq",
+  "license": "MIT",
   "private": true,
   "version": "0.0.0",
   "type": "module",
