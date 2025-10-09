@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { BackgroundDesktopDark, BackgroundDesktopLight } from "./assets/images";
 import Header from "./components/Header.vue";
+import Todo from "./components/Todo/Todo.vue";
 import { useThemeStore } from "./stores/themeStore";
 
 const { isDark } = useThemeStore();
@@ -16,6 +17,10 @@ const { isDark } = useThemeStore();
     </div>
     <div class="relative z-10 mx-auto w-[min(100vw-3rem,33.75rem)] bg-gray-900">
       <Header />
+      <main>
+        <h1 class="sr-only">Todo App</h1>
+        <Todo />
+      </main>
     </div>
   </div>
 </template>
