@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { createDraggable } from "../../helpers/createDraggable";
 import type { TodoItem } from "../../stores/todoStore";
 import Checkbox from "../common/Checkbox.vue";
 
@@ -6,11 +7,15 @@ const { todo, onRemoveClick } = defineProps<{
   todo: TodoItem;
   onRemoveClick: () => void;
 }>();
+
+const { moving } = createDraggable("it", { sortable: true });
 </script>
 
 <template>
   <li
     class="dark:bg-navy-900 flex items-center gap-[clamp(0.75rem,0.0344rem+3.0534vw,1.5rem)] border-b border-gray-300 bg-white px-[clamp(1.25rem,1.0115rem+1.0178vw,1.5rem)] py-[clamp(1rem,0.7615rem+1.0178vw,1.25rem)] lg:first:pb-[1.1875rem] dark:border-purple-700"
+    :class="moving && '_ relative z-[999] cursor-move shadow-xl'"
+    ref="it"
   >
     <Checkbox label="Mark as completed" v-model="todo.completed" :name="todo.content.replace(/\s/g, '-')" />
     <p class="w-full pt-[0.1875rem]" :class="todo.completed && 'text-gray-600 line-through dark:text-purple-600'">
@@ -21,6 +26,7 @@ const { todo, onRemoveClick } = defineProps<{
       type="button"
       aria-label="Remove item"
       @click="onRemoveClick"
+      @mousedown.stop=""
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
