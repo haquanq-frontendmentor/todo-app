@@ -8,6 +8,7 @@ const model = defineModel();
 <template>
   <label
     class="group focus-w relative block aspect-square w-[clamp(1.25rem,1.0115rem+1.0178vw,1.5rem)] shrink-0 cursor-pointer rounded-full"
+    @mousedown.stop=""
   >
     <span class="sr-only">{{ label }}</span>
     <input class="peer sr-only" type="checkbox" :checked="checked" v-model="model" />
