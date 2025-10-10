@@ -3,7 +3,7 @@
 This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 <p>
-  <a href="">
+  <a href="https://www.frontendmentor.io/solutions/interactive-todo-app-using-vue-tailwindcss-CRfX0_XLo6">
     <img
       alt="Solution post"
       src="https://img.shields.io/badge/Frontendmentor-blue?label=Solution%20on"
