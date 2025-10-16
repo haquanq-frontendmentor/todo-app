@@ -22,8 +22,8 @@ const isDarkMode = computed(() => themeStore.isDark());
       @click="themeStore.cycleThemes"
       aria-label="Turn on dark mode"
     >
-      <img v-show="!isDarkMode" :src="MoonIcon" alt="" />
-      <img v-show="isDarkMode" :src="SunIcon" alt="" />
+      <img v-show="isDarkMode" :src="MoonIcon" alt="" />
+      <img v-show="!isDarkMode" :src="SunIcon" alt="" />
     </button>
   </header>
 </template>
